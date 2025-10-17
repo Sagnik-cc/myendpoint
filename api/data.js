@@ -20,6 +20,7 @@ export default function handler(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*"); // Allow all origins
     // Access the POST body
     const data = req.body;
+    console.log("Received POST payload:", data);
     return res.status(200).json({
       message: "POST request received!",
       receivedData: data
